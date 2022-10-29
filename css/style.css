@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,700;1,700&display=swap');
+
+body {
+  background-color: black;
+  color: rgb(0, 252, 13);
+  font-family: 'Comic Neue', cursive;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  text-decoration-line: underline;
+  font-size: 7vw;
+}
+
+h2 {
+  font-size: 5vw;
+}
+
+.social-media-link {
+  color: inherit;
+  font-size: 3vw;
+  display: block;
+  text-align: center;
+}
