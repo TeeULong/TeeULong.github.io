@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Roboto&display=swap');
+body {
+
+    background-color:rgb(35, 39, 46);
+}
+
+h1{
+    font-family: 'Nabla', cursive;
+    font-size: 7vw;
+}
+.topnav {
+overflow: hidden;
+font-size: 7vw;
+}
+.topnav a {
+
+}
+
+.topnav a:hover {
+
+}
+.topnav a.active-tab {
+
+}
+
+.topnav .icon {
+  display: none;
+}
