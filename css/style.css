@@ -26,3 +26,22 @@ h2 {
   display: block;
   text-align: center;
 }
+
+.scrolling-image-background {
+  overflow: hidden;
+}
+.scrolling-image {
+  background: url("https://techcrunch.com/wp-content/uploads/2014/06/babygif.gif?w=700&crop=1") repeat-x;
+  height: 750px;
+  width: 7680px;
+  
+  animation: slide 10s linear infinite;
+}
+@keyframes slide {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-3840px); /* The image width */
+  }
+}
