@@ -5,9 +5,13 @@ on:
     branches: [master]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-      steps:
-        - name: List images
-          run: | 
-            npm run list-images
+    steps:
+      - name: List images
+        run: |
+          npm run list-images
+      - uses: actions/upload-artifact@master
+        with:
+          name: my-artifact
+          path: imageList.txt
