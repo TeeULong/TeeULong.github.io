@@ -1,26 +1,14 @@
 const sharp = require("sharp");
 
 const fs = require("fs");
+const { wrap } = require("module");
 
-let height = 1500;
-let width = null;
+const readline = require("readline-sync");
 
-const readline = require("readline").createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-readline.question(`image width [default: null]: `, (width) => {
-  if (!width) {
-    this.width = width;
-  }
-});
-readline.question(`image height [default: 1500]: `, (height) => {
-  if (!height) {
-    this.height = height;
-    readline.close();
-  }
-});
+const height = readline.question(`image height [default: 1500]: `) || 1500;
+const width = readline.question(`image width [default: null]: `) || null;
+console.log("fertig");
+console.log("w: " + width + " h: " + height);
 
 fs.readdirSync("../images/original-images/").forEach((file) => {
   filename = file.split(".", 2);
@@ -30,6 +18,7 @@ fs.readdirSync("../images/original-images/").forEach((file) => {
       .composite([
         { input: "../images/watermark/logo.png", gravity: "southeast" },
       ])
+      .rotate()
       .resize(width, height)
       .webp({ lossless: true })
       .toFile("../images/compressed-images/" + filename[0] + ".webp")
