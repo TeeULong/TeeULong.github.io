@@ -33,14 +33,13 @@ h1 {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 10px;
 }
 
 .image {
   width: 33%;
-  height: 100%;
   object-fit: cover;
-  min-width: 400px;
+  min-width: 300px;
   /* auto flex */
   max-width: 100%;
   flex-grow: 1;
