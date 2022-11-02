@@ -45,7 +45,7 @@ h2 {
   color: rgb(0, 252, 13);
 }
 .topnav a.active-tab {
-  text-decoration:underline;
+  text-decoration: underline;
   text-decoration-thickness: 0.3vw;
 }
 
