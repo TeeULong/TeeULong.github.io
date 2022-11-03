@@ -17,6 +17,6 @@ readdirSync("./images/compressed-images/").forEach((file) => {
     sharp("./images/compressed-images/" + file)
       .resize(arg, arg)
       .extract({ width: arg, height: arg, left: 0, top: 0 })
-      .toFile("./" + filename[0] + "-TN" + ".JPG");
+      .toFile("./images/thumbnails/" + filename[0] + "-TN" + ".JPG");
   }
 });
