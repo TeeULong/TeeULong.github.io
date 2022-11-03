@@ -14,6 +14,10 @@ async function main() {
     newImage.setAttribute("class", "image");
     newImage.setAttribute("loading", "lazy");
     newImage.setAttribute(
+      "alt",
+      elements[0].replace("-TN", "").replace(/_/g, " ")
+    );
+    newImage.setAttribute(
       "src",
       "./images/thumbnails/" + elements[0] + "-TN.JPG"
     );
