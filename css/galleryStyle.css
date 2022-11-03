@@ -40,13 +40,17 @@ h1 {
 }
 .gallery {
   display: grid;
-  grid-template-columns: 400px 400px;
+  grid-template-columns: auto auto;
   justify-content:center;
   grid-gap: 40px;
 }
 
 .image {
   max-width: 100%;
+  height:auto;
+  max-height: auto;
+  margin: auto;
+  
   -webkit-filter: brightness(100%);
 }
 
