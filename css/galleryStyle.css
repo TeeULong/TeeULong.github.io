@@ -47,6 +47,13 @@ h1 {
 
 .image {
   max-width: 100%;
+  -webkit-filter: brightness(100%);
+}
+
+.image:hover{
+  -webkit-filter: brightness(60%);
+  cursor: pointer;
+
 }
 
 h1 {
