@@ -16,7 +16,7 @@ readdirSync("./images/original-images/").forEach((file) => {
       ])
       .rotate()
       .resize(width, height)
-      .webp({ lossless: true })
-      .toFile("./images/compressed-images/" + filename[0] + ".webp")
+      .jpeg({ quality: 100 })
+      .toFile("./images/compressed-images/" + filename[0] + ".JPG");
   }
 });

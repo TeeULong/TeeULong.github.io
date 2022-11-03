@@ -1,34 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Nabla&family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: rgb(42, 42, 42);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  background-color: white;
+  color: black;
 }
 
 h1 {
 }
-
+.nav-container {
+  width: 100%;
+  height: 50px;
+}
 .topnav {
+  display: flex;
+  align-items: center;
   overflow: hidden;
-  font-size: 2vw;
-  background-color: rgb(37, 37, 37);
+  text-decoration: none;
+  justify-content: flex-start;
+  position: relative;
+  padding-top: 1%;
 }
 .topnav a {
-  float: left;
-  padding: 1.5vw;
-  color: white;
-  text-decoration: none;
+}
+.navigation {
+  display: flex;
+  column-gap: 40px;
+  font-size: 30px;
+  padding-left: 2%;
+}
+.navigation a {
+  text-decoration: inherit;
+  color: black;
+  align-items: baseline;
 }
 
-.topnav a:hover {
-  background-color: rgb(76, 76, 76);
-  color: white;
-}
-.topnav a.active-tab {
-}
-
-.topnav .icon {
-  display: none;
+.navigation a:hover {
+  text-decoration: underline;
 }
 .gallery {
   display: flex;
@@ -46,8 +54,18 @@ h1 {
   align-self: center;
 }
 h1 {
+  font-weight: 400;
+  padding-top: 10%;
+  text-decoration: underline;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 5vw;
-  color: white;
+  font-size: 2vw;
+}
+.name {
+  font-weight: 500;
+  flex: 0 1 auto;
+  left: 50%;
+  font-size: 50px;
+  position: absolute;
+  transform: translateX(-50%);
 }
