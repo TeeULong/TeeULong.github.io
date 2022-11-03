@@ -39,20 +39,16 @@ h1 {
   text-decoration: underline;
 }
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: 400px 400px;
+  justify-content:center;
+  grid-gap: 40px;
 }
 
 .image {
-  width: 33%;
-  object-fit: cover;
-  min-width: 300px;
-  /* auto flex */
   max-width: 100%;
-  flex-grow: 1;
-  align-self: center;
 }
+
 h1 {
   font-weight: 400;
   padding-top: 10%;
