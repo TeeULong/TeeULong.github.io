@@ -7,7 +7,6 @@ body {
   padding: 0px !important;
 }
 
-
 h2 {
   font-size: 50px;
 }
@@ -16,13 +15,13 @@ h2 {
   display: flex;
   align-items: center;
   text-decoration: none;
-  justify-content: flex-start;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 2;
   background-color: white;
   padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
 .navigation {
@@ -42,21 +41,20 @@ h2 {
 
 .image-container {
   padding-top: 3%;
-  padding-bottom: 7%;
   text-align: center;
 }
 
 .image {
   display: block;
-  box-shadow: 9px 9px 9px rgb(108, 108, 108);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   margin-left: auto;
   margin-right: auto;
-  width: 29%;
+  height: 80vh;
+ 
 }
 
 h1 {
   font-weight: 400;
-  padding-top: 10%;
   text-decoration: underline;
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -73,25 +71,15 @@ h1 {
 .image-container {
   display: grid;
 }
-.myButton {
-  background-color: white;
-  border-radius: 15px;
-  border: 3px solid #000000;
-  display: inline-block;
-  cursor: pointer;
+.back-button {
+ cursor: pointer;
   color: #000000;
   font-size: 20px;
-  padding: 9px 35px;
   text-decoration: none;
-  position: relative;
-  top: 200px;
-  left: 300px;
+
 }
-.myButton:hover {
-  background: linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
-  background-color: #ffffff;
-  transform: scale(1.01);
+.back-button:hover {
 }
-.myButton:active {
-  top: 201px;
+.back-button:active {
+ 
 }
