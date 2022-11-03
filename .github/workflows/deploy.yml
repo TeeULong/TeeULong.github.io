@@ -29,6 +29,14 @@ jobs:
         with:
           name: my-artifact
           path: imageList.txt
+      - name: crop Images to Thumbnail
+        run: |
+          npm i
+          node .\js\cropImages.js 700
+      - uses: actions/upload-artifact@master
+        with:
+          name: image-artifact
+          path: ./
 
   deploy:
     needs: build
@@ -44,6 +52,11 @@ jobs:
         with:
           name: my-artifact
           path: ./
+      - name: Download thumbnails
+        uses: actions/download-artifact@master
+        with:
+          name: image-artifact
+          path: ./images/thumbnails/
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
