@@ -1,11 +1,15 @@
 import sharp from "sharp";
-import { readdirSync } from "fs";
+import { existsSync, mkdirSync, readdirSync } from "fs";
 import { exit } from "process";
 
 const args = process.argv;
 
 if (args.length != 3) exit();
 
+const directory = "./images/thumbnails/";
+if (!existsSync(directory)) {
+  mkdirSync(directory);
+}
 const arg = parseInt(args[2]);
 
 readdirSync("./images/compressed-images/").forEach((file) => {
@@ -15,6 +19,6 @@ readdirSync("./images/compressed-images/").forEach((file) => {
     sharp("./images/compressed-images/" + file)
       .resize(arg, arg)
       .extract({ width: arg, height: arg, left: 0, top: 0 })
-      .toFile("./images/thumbnails/" + filename[0] + "-TN" + ".JPG");
+      .toFile(directory + filename[0] + "-TN" + ".JPG");
   }
 });
