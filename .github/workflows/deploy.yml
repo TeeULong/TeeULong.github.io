@@ -32,7 +32,7 @@ jobs:
       - name: crop Images to Thumbnail
         run: |
           npm i
-          node .\js\cropImages.js 700
+          node ./js/cropImages.js 700
       - uses: actions/upload-artifact@master
         with:
           name: image-artifact
