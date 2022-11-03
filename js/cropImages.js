@@ -8,8 +8,6 @@ if (args.length != 3) exit();
 
 const arg = parseInt(args[2]);
 
-console.log(args);
-
 readdirSync("./images/compressed-images/").forEach((file) => {
   const filename = file.split(".", 2);
 

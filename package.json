@@ -4,8 +4,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compress": "node js/compressImages.js",
-    "list-images": "node scripts/imageList.js"
+    "compress": "node js/compressImages.js default",
+    "list-images": "node scripts/imageList.js",
+    "crop-images": "node js/cropImages.js 700",
+    "remove-folder": "rm -rf ./images/thumbnails && rm -rf ./images/compressed-images",
+    "create-folder": "mkdir ./images/thumbnails && mkdir ./images/compressed-images",
+    "reprocess-images": "npm run remove-folder && npm run create-folder && npm run compress && npm run list-images && npm run crop-images"
   },
   "repository": {
     "type": "git",
@@ -22,7 +26,6 @@
     "readline-sync": "^1.4.10",
     "sharp": "^0.31.1"
   },
-  "devDependencies": {},
   "description": "",
   "type": "module"
 }

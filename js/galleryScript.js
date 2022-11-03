@@ -9,19 +9,21 @@ async function main() {
   const imageList = images.split("\n");
 
   imageList.forEach((element) => {
-    const elements = element.split(".");
+    const imageName = element.split(".")[0];
+    /** @type HTMLAnchorElement */
+    const newAnchor = document.createElement("a");
+    newAnchor.href = "/image.html?image=" + imageName + ".JPG";
+    newAnchor.classList.add("image-container");
+
     const newImage = document.createElement("img");
-    newImage.setAttribute("class", "image");
-    newImage.setAttribute("loading", "lazy");
-    newImage.setAttribute(
-      "alt",
-      elements[0].replace("-TN", "").replace(/_/g, " ")
-    );
-    newImage.setAttribute(
-      "src",
-      "./images/thumbnails/" + elements[0] + "-TN.JPG"
-    );
-    document.getElementById("gallery").append(newImage);
+
+    newImage.classList.add("image");
+    newImage.loading = "lazy";
+    newImage.alt = imageName.replace("-TN", "").replace(/_/g, " ");
+    newImage.src = "./images/thumbnails/" + imageName + "-TN.JPG";
+
+    newAnchor.appendChild(newImage);
+    document.getElementById("gallery").append(newAnchor);
   });
 }
 main();

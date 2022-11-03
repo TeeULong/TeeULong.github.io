@@ -1,27 +1,16 @@
-const fetchImages = async () => {
-  const response = await fetch("../imageList.txt");
-  const images = await response.text();
-  return images;
+const main = async () => {
+  const params = new URLSearchParams(window.location.search);
+  const imageName = params.get("image");
+
+  const newImage = document.createElement("img");
+
+  newImage.classList.add("image");
+  newImage.alt = imageName.replace(/_/g, " ").replace(".JPG", "");
+
+  newImage.src = "./images/compressed-images/" + imageName;
+
+  document.querySelector(".image-container").append(newImage);
+
+  document.querySelector("h2.text").innerText = newImage.alt;
 };
-
-async function main() {
-  const images = await fetchImages();
-  const imageList = images.split("\n");
-
-  imageList.forEach((element) => {
-    const elements = element.split(".");
-    const newImage = document.createElement("img");
-    newImage.setAttribute("class", "image");
-    newImage.setAttribute("loading", "lazy");
-    newImage.setAttribute(
-      "alt",
-      elements[0].replace(/_/g, " ")
-    );
-    newImage.setAttribute(
-      "src",
-      "./images/thumbnails/" + elements[0] + "-TN.JPG"
-    );
-    document.getElementById("gallery").append(newImage);
-  });
-}
 main();

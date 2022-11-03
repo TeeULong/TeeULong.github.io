@@ -2,9 +2,14 @@ import sharp from "sharp";
 import { readdirSync } from "fs";
 import { question } from "readline-sync";
 
-const height = question(`image height [default: 1500]: `) || 1500;
-const width = question(`image width [default: null]: `) || null;
-console.log("w: " + width + " h: " + height);
+const height = 1500;
+const width = null;
+
+if (process.argv[2] != "default") {
+  height = question(`image height [default: null]: `) || null;
+  width = question(`image width [default: null]: `) || null;
+  console.log("w: " + width + " h: " + height);
+}
 
 readdirSync("./images/original-images/").forEach((file) => {
   const filename = file.split(".", 2);

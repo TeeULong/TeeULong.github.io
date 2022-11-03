@@ -4,12 +4,10 @@ body {
   font-weight: 600;
   background-color: white;
   color: black;
+  padding: 0px !important;
 }
 
-.nav-container {
-  width: 100%;
-  height: 50px;
-}
+
 h2 {
   font-size: 50px;
 }
@@ -17,19 +15,20 @@ h2 {
 .topnav {
   display: flex;
   align-items: center;
-  overflow: hidden;
   text-decoration: none;
   justify-content: flex-start;
-  position: relative;
-  padding-top: 1%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  background-color: white;
+  padding: 30px;
 }
-.topnav a {
-}
+
 .navigation {
   display: flex;
   column-gap: 40px;
   font-size: 30px;
-  padding-left: 2%;
 }
 .navigation a {
   text-decoration: inherit;
@@ -65,7 +64,6 @@ h1 {
 }
 .name {
   font-weight: 500;
-  flex: 0 1 auto;
   left: 50%;
   font-size: 50px;
   position: absolute;
@@ -95,5 +93,5 @@ h1 {
   transform: scale(1.01);
 }
 .myButton:active {
-  top: 1px;
+  top: 201px;
 }
