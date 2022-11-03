@@ -10,7 +10,7 @@ const arg = parseInt(args[2]);
 
 console.log(args);
 
-readdirSync("./images/original-images/").forEach((file) => {
+readdirSync("./images/compressed-images/").forEach((file) => {
   const filename = file.split(".", 2);
 
   if (filename.length === 2) {
