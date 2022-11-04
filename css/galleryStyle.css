@@ -43,10 +43,11 @@ body {
   grid-gap: 2vw 2vw;
 }
 
+
+
 .image {
-  max-width: 100%;
-  height:auto;
-  max-height: auto;
+  width: 100%;
+  height: 100%;
   margin: auto;
   
   -webkit-filter: brightness(100%);
