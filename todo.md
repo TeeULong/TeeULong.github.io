@@ -7,9 +7,9 @@
 - [x] add thumbnail compress to job
 - [ ] about me 
 - [ ] extend home 
-- [ ] compress images sort portrait and landscape
+- [x] compress images sort portrait and landscape
 - [ ] https://css-tricks.com/snippets/css/complete-guide-grid/
-
-
-
-
+- [ ] mobile view (single image)
+- [ ] name center topnav
+- [ ] overflow gallery
+- [ ] name at the bottom

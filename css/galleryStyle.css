@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -6,10 +7,10 @@ body {
   color: black;
 }
 
-
 .topnav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   text-decoration: none;
   position: fixed;
   width: 100%;
@@ -30,7 +31,6 @@ body {
   text-decoration: inherit;
   color: black;
   align-items: baseline;
-  
 }
 
 .navigation a:hover {
@@ -39,24 +39,21 @@ body {
 .gallery {
   display: grid;
   grid-template-columns: auto auto;
-  justify-content:center;
+  justify-content: center;
   grid-gap: 2vw 2vw;
 }
-
-
 
 .image {
   width: 100%;
   height: 100%;
   margin: auto;
-  
+
   -webkit-filter: brightness(100%);
 }
 
-.image:hover{
+.image:hover {
   -webkit-filter: brightness(60%);
   cursor: pointer;
-
 }
 
 h1 {
@@ -69,9 +66,5 @@ h1 {
 }
 .name {
   font-weight: 500;
-  flex: 0 1 auto;
-  left: 50%;
   font-size: 50px;
-  position: absolute;
-  transform: translateX(-50%);
 }
