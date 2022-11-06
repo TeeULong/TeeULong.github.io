@@ -12,7 +12,7 @@
 - [x] mobile view (single image)
 - [x] name center topnav
 - [x] overflow gallery
-- [ ] name at the bottom
+- [x] name at the bottom
 - [x] click on name to home
 - [x] name of img by hover
 - [ ] dropdown animation
