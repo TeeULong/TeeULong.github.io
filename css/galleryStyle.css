@@ -22,7 +22,7 @@ body {
 }
 
 .drop-menu {
-display: none;
+  display: none;
 }
 
 .menu-icon {
@@ -140,11 +140,9 @@ h1 {
     margin: 140px 0 50px 0;
   }
 
- 
-
   .topnav {
     grid: auto / 1fr auto 1fr;
-    padding: 20px ;
+    padding: 20px;
   }
 
   .menu-icon {
@@ -157,12 +155,27 @@ h1 {
     top: 83px;
     height: auto;
     width: 100%;
-    background-color: red;
+    background-color: white;
     display: none;
     grid: auto / 1fr 1fr 1fr;
+    align-items: center;
     text-align: center;
-    height: 60px;
-    
+    padding: 10px;
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  }
+
+  .drop-menu a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+
+  .drop-menu a img {
+    max-height: 50px;
+    padding: 8px;
   }
 
   .name {
@@ -181,7 +194,7 @@ h1 {
   .gallery {
     grid-template-columns: auto;
     padding: 0 3vw;
-    margin: 85px 0 50px 0; 
+    margin: 85px 0 50px 0;
   }
   .drop-menu {
     top: 68px;
@@ -193,6 +206,10 @@ h1 {
 }
 
 @keyframes dropdown {
-  0% {top: 0;}
-  100% {top: 68px;}
-} 
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 68px;
+  }
+}

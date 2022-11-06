@@ -35,9 +35,5 @@ const clickMenu = document
 
     const dropMenu = document.querySelector(".drop-menu");
     console.log(dropMenu.style.display);
-    if (dropMenu.style.display == "grid") {
-      dropMenu.style.display = "none";
-    } else {
-      dropMenu.style.display = "grid";
-    }
+    dropMenu.style.display = dropMenu.style.display == "grid" ? "none" : "grid";
   });
