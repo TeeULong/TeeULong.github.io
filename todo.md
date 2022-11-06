@@ -10,6 +10,8 @@
 - [x] compress images sort portrait and landscape
 - [ ] https://css-tricks.com/snippets/css/complete-guide-grid/
 - [ ] mobile view (single image)
-- [ ] name center topnav
+- [x] name center topnav
 - [ ] overflow gallery
 - [ ] name at the bottom
+- [ ] click on name to home
+- [ ] name of img by hover

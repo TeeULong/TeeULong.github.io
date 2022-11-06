@@ -27,3 +27,15 @@ async function main() {
   });
 }
 main();
+
+const clickMenu = document
+  .querySelector(".menu-icon")
+  .addEventListener("click", () => {
+    const dropMenu = document.querySelector(".drop-menu");
+    if (dropMenu.style.display == "none") {
+      dropMenu.style.display = "grid";
+    } else {
+      dropMenu.style.display = "none";
+    }
+  });
+
