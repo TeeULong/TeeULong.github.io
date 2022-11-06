@@ -31,11 +31,13 @@ main();
 const clickMenu = document
   .querySelector(".menu-icon")
   .addEventListener("click", () => {
+    console.log("click");
+
     const dropMenu = document.querySelector(".drop-menu");
-    if (dropMenu.style.display == "none") {
-      dropMenu.style.display = "grid";
-    } else {
+    console.log(dropMenu.style.display);
+    if (dropMenu.style.display == "grid") {
       dropMenu.style.display = "none";
+    } else {
+      dropMenu.style.display = "grid";
     }
   });
-
