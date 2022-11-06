@@ -41,7 +41,9 @@ h1 {
 
 .name {
   font-weight: 500;
+  color: black;
   font-size: 40px;
+  text-decoration: none;
 }
 
 .navigation {
