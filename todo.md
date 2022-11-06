@@ -13,6 +13,8 @@
 - [x] name center topnav
 - [x] overflow gallery
 - [ ] name at the bottom
-- [ ] click on name to home
-- [ ] name of img by hover
+- [x] click on name to home
+- [x] name of img by hover
 - [ ] dropdown animation
+- [ ] create own icons
+- [ ] 

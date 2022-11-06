@@ -12,6 +12,8 @@ async function main() {
     const imageName = element.split(".")[0];
     /** @type HTMLAnchorElement */
     const newAnchor = document.createElement("a");
+    const newName = document.createElement("div");
+
     newAnchor.href = "/image.html?image=" + imageName + ".JPG";
     newAnchor.classList.add("image-container");
 
@@ -22,7 +24,13 @@ async function main() {
     newImage.alt = imageName.replace("-TN", "").replace(/_/g, " ");
     newImage.src = "./images/thumbnails/" + imageName + "-TN.JPG";
 
+    newName.classList.add("hover-name");
+    newName.innerHTML = imageName.replace("-TN", "").replace(/_/g, " ");
+    
+
+
     newAnchor.appendChild(newImage);
+    newAnchor.appendChild(newName);
     document.getElementById("gallery").append(newAnchor);
   });
 }

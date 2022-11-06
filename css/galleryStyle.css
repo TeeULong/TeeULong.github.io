@@ -44,7 +44,18 @@ h1 {
   color: black;
   font-size: 40px;
   text-decoration: none;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+
+
+
+
 
 .navigation {
   display: flex;
@@ -72,6 +83,7 @@ h1 {
 
 .gallery .image-container {
   display: flex;
+  position: relative;
 }
 
 .gallery .image {
@@ -84,6 +96,21 @@ h1 {
 .gallery .image:hover {
   -webkit-filter: brightness(60%);
   cursor: pointer;
+}
+
+.hover-name {
+  position: absolute;
+  text-align: center;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+
+}
+
+.gallery .image:hover + .hover-name {
+  display: flex;
 }
 
 .image-view::before {
@@ -109,8 +136,7 @@ h1 {
   margin-right: auto;
   max-height: 80vh;
   max-width: 90%;
-  padding: 1%;
-  padding-bottom: 5%;
+  padding: 0.5%;
 }
 
 .image-view .image-container {
