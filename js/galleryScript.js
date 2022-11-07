@@ -42,6 +42,6 @@ const clickMenu = document
     console.log("click");
 
     const dropMenu = document.querySelector(".drop-menu");
-    console.log(dropMenu.style.display);
-    dropMenu.style.display = dropMenu.style.display == "grid" ? "none" : "grid";
+    dropMenu.classList.toggle("click");
   });
+
