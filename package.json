@@ -9,7 +9,8 @@
     "crop-images": "node js/cropImages.js 700",
     "remove-folder": "rm -rf ./images/thumbnails && rm -rf ./images/compressed-images",
     "create-folder": "mkdir ./images/thumbnails && mkdir ./images/compressed-images",
-    "reprocess-images": "npm run remove-folder && npm run create-folder && npm run compress && npm run list-images && npm run crop-images"
+    "reprocess-images": "npm run remove-folder && npm run create-folder && npm run compress && npm run list-images && npm run crop-images",
+    "upload": "npm run remove-folder && npm run create-folder && npm run compress && npm run list-images && npm run crop-images && git add --all && git commit -m 'upload new image' && git push origin main"
   },
   "repository": {
     "type": "git",
